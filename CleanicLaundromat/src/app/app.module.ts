@@ -5,6 +5,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SelfServiceReceiptComponent } from './self-service/self-service-receipt/self-service-receipt.component';
+import { SelfServiceButtonComponent } from './self-service-button/self-service-button.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { SelfServiceReceiptComponent } from './self-service/self-service-receipt
     AppComponent,
     routingComponents,
     HomeComponent,
-    SelfServiceReceiptComponent
+    SelfServiceReceiptComponent,
+    SelfServiceButtonComponent
   ],
   imports: [
     BrowserModule,

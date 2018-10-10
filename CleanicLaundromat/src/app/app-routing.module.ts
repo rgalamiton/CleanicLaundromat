@@ -7,7 +7,7 @@ import { SelfServiceReceiptComponent } from './self-service/self-service-receipt
 const routes: Routes = [
   {path: 'self-service', component: SelfServiceComponent},  
   {path: 'drop-off', component: DropOffComponent },
-  {path: 'sel-service-receipt', component:  SelfServiceReceiptComponent}
+  {path: 'self-service-receipt', component:  SelfServiceReceiptComponent}
 
 ];
 
