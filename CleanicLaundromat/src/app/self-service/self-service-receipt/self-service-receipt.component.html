@@ -1,28 +1,26 @@
 
 <div class="container">
   <h1>Card #</h1>
-
-  
-  <form class="col s12">
+  <form class="col s12" #bboardForm="ngForm" (ngSubmit)="onSubmit(bboardForm)">
     <div class="row">
       <div class="input-field col s4">
-          <input id="Name" type="text" class="validate">
+          <input id="Name" type="text" class="validate" name="name" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.name">
           <label for="Name">Name</label>
       </div>
       <div class="input-field col s4">
-          <input id="Contact" type="text" class="validate">
+          <input id="Contact" type="text" class="validate" name="contact" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.contact">
           <label for="Contact">Contact</label>
       </div>
       <div class="input-field col s4">
-          <input id="BeginningBal" type="text" class="validate">
+          <input id="BeginningBal" type="text" class="validate" name="beginningBal" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.beginningBal">
           <label for="BeginningBal">Beginning Balance</label>
       </div>
       <div class="input-field col s4">
-          <input id="EndingBal" type="text" class="validate">
+          <input id="EndingBal" type="text" class="validate" name="endingBal" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.endingBal">
           <label for="EndingBal">Ending Balance</label>
       </div>
       <div class="input-field col s4">
-          <input id="AmountUsed" type="text" class="validate">
+          <input id="AmountUsed" type="text" class="validate" name="amountUsed" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.amountUsed">
           <label for="AmountUsed">Amount Used</label>
       </div>
 
@@ -55,7 +53,7 @@
         </table> 
         <br>
         <div class="input-field col s2">
-            <input disabled value="" id="disabled" type="text" class="validate">
+            <input disabled value="" id="disabled" type="text" class="validate" name="total" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.total">
           <label for="Total">Total</label>
         </div>
     </div>
