@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SelfServiceReceiptComponent } from './self-service/self-service-receipt/self-service-receipt.component';
 import { SelfServiceButtonComponent } from './self-service-button/self-service-button.component';
+import { InventoryComponent } from './inventory/inventory.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SelfServiceButtonComponent } from './self-service-button/self-service-b
     routingComponents,
     HomeComponent,
     SelfServiceReceiptComponent,
-    SelfServiceButtonComponent
+    SelfServiceButtonComponent,
+    InventoryComponent
   ],
   imports: [
     BrowserModule,

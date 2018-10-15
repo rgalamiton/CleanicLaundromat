@@ -3,11 +3,11 @@
   <h1>Card #</h1>
   <form class="col s12" #bboardForm="ngForm" (ngSubmit)="onSubmit(bboardForm)">
     <div class="row">
-      <div class="input-field col s4">
+      <div class="input-field col s6">
           <input id="Name" type="text" class="validate" name="name" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.name">
           <label for="Name">Name</label>
       </div>
-      <div class="input-field col s4">
+      <div class="input-field col s6">
           <input id="Contact" type="text" class="validate" name="contact" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.contact">
           <label for="Contact">Contact</label>
       </div>
@@ -31,6 +31,7 @@
                 <th>Item Name</th>
                 <th>Quantity</th>
                 <th>Item Price</th>
+                <th>Total</th>
             </tr>
           </thead>
           <tbody>
@@ -38,23 +39,36 @@
               <td>Breeze</td>
               <td>2</td>
               <td>$0.87</td>
+              <td>$1.64</td>
             </tr>
             <tr>
               <td>Surf</td>
               <td>1</td>
               <td>$3.76</td>
+              <td>$3.76</td>
             </tr>
             <tr>
               <td>Tide</td>
               <td>1</td>
-              <td>$7.00</td>
+              <td>$2.00</td>
+              <td>$2.00</td>
             </tr>
           </tbody>
         </table> 
         <br>
         <div class="input-field col s2">
+          <input id="sukiCardNum" type="text" class="validate" name="sukiCardNum" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.sukiCardNum">
+          <label for="sukiCardNum">Suki Card #</label>
+        </div>
+        
+        <div class="input-field col s2">
             <input disabled value="" id="disabled" type="text" class="validate" name="total" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.total">
           <label for="Total">Total</label>
+        </div>
+
+        <div class="input-field col s12">
+          <input id="remarks" type="text" class="validate" name="remarks" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.remarks">
+          <label for="remarks">Remarks</label>
         </div>
     </div>
     <button type="submit" class="btn btn-success">Submit</button>
