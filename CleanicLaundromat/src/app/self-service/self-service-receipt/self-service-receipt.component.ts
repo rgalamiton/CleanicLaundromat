@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DetailsService } from '../shared/details.service';
 import { ToastrService } from 'ngx-toastr';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-self-service-receipt',
@@ -12,6 +13,19 @@ export class SelfServiceReceiptComponent implements OnInit {
   constructor(private LaundryService: DetailsService, private toastr: ToastrService) { }
 
   ngOnInit() {
+  }
+
+  resetForm(form : NgForm){
+    form.reset();
+    this.LaundryService.selectedBboard = {
+      id : null,
+      name: '',
+      contact: '',
+      beginningBal: 0,
+      endingBal: 0,
+      amountUsed: 0,
+      total: 0,
+    }
   }
 
   onSubmit(form){

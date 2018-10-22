@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { SelfServiceReceiptComponent } from './self-service/self-service-receipt/self-service-receipt.component';
 import { SelfServiceButtonComponent } from './self-service-button/self-service-button.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { AddItemComponent } from './inventory/add-item/add-item.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { InventoryComponent } from './inventory/inventory.component';
     HomeComponent,
     SelfServiceReceiptComponent,
     SelfServiceButtonComponent,
-    InventoryComponent
+    InventoryComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,
